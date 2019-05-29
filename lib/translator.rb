@@ -1,5 +1,6 @@
 # require modules here
 require "yaml"
+require "pry"
 
 def load_library(file_path)
   # code goes here
@@ -16,6 +17,7 @@ def get_japanese_emoticon(file_path, emoticon)
   # code goes here
   library = load_library(file_path)
   found_emoticon = library["get_emoticon"][emoticon]
+  binding.pry
   if found_emoticon
     found_emoticon
   else
